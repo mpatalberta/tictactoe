@@ -31,40 +31,7 @@ public class TicTacToeGame {
 		{
 			mBoard[i] = OPEN_SPOT;
 		}
-//		char turn = HUMAN_PLAYER;    // Human starts first
-//		int  win = 0;                // Set to 1, 2, or 3 when game is over
-//		
-//		// Keep looping until someone wins or a tie
-//		while (win == 0)
-//		{	
-//			displayBoard();
-//
-//			if (turn == HUMAN_PLAYER)
-//			{
-//				getUserMove();
-//				turn = COMPUTER_PLAYER;
-//			}
-//			else
-//			{
-//				getComputerMove();
-//				turn = HUMAN_PLAYER;
-//			}	
-//
-//			win = checkForWinner();
-//		}
-//
-//		displayBoard();
-//
-//		// Report the winner
-//		System.out.println();
-//		if (win == 1)
-//			System.out.println("It's a tie.");
-//		else if (win == 2)
-//			System.out.println(HUMAN_PLAYER + " wins!");
-//		else if (win == 3)
-//			System.out.println(COMPUTER_PLAYER + " wins!");
-//		else
-//			System.out.println("There is a logic problem!");
+
 	}
 	
 	public void clearBoard()
@@ -170,42 +137,7 @@ public class TicTacToeGame {
 		return 1;
 	}
 	
-/*	void getUserMove() 
-	{
-		// Eclipse throws a NullPointerException with Console.readLine
-		// Known bug: https://bugs.eclipse.org/bugs/show_bug.cgi?id=122429
-		//Console console = System.console();
-		
-		Scanner s = new Scanner(System.in);
-		
-		int move = -1;
-		
-		while (move == -1) {			
-			try {
-				System.out.print("Enter your move: ");
-			    move = s.nextInt();
-			
-				while (move < 1 || move > BOARD_SIZE || 
-					   mBoard[move-1] == HUMAN_PLAYER || mBoard[move-1] == COMPUTER_PLAYER) {
-					
-					if (move < 1 || move > BOARD_SIZE)
-						System.out.println("Please enter a move between 1 and " + BOARD_SIZE + ".");
-					else
-						System.out.println("That space is occupied.  Please choose another space.");
-		
-					System.out.print("Enter your move: ");
-				    move = s.nextInt();
-				}
-			} 
-			catch (InputMismatchException ex) {
-				System.out.println("Please enter a number between 1 and " + BOARD_SIZE + ".");
-				s.next();  // Get next line so we start fresh
-				move = -1;
-			}
-		}
 
-		mBoard[move-1] = HUMAN_PLAYER;
-	}*/
 	
 	public int getComputerMove() 
 	{
@@ -267,10 +199,5 @@ public class TicTacToeGame {
 	}	
 	
 	
-	/**
-	 * @param args
-	 */
-//	public static void main(String[] args) {		
-//		new TicTacToeGame();		
-//	}
+
 }
